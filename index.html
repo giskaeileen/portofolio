@@ -19,7 +19,7 @@
         z-index: 1000; /* Pastikan header berada di atas elemen lain */
         width: 100%;
     }
-
+    
     .hero-content {
         gap: 20px; /* Jarak antara gambar dan teks */
     }
@@ -184,12 +184,68 @@
       height: auto;
       margin-right: 5px; /* Adjust as needed */
     }
+
+    .navbar-toggler-icon i {
+      font-size: 2em; /* Sesuaikan ukuran ikon sesuai kebutuhan Anda */
+    }
+
+    .modal-content {
+      background-color: rgba(255, 255, 255, 0.9); /* Ubah nilai alpha untuk mengatur tingkat transparansi */
+      backdrop-filter: blur(10px); /* Efek blur pada latar belakang */
+      border-radius: 10px; /* Sudut modal */
+    }
+
+    /* .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #fff;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.active {
+      left: 0;
+    } */
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #fff;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      padding: 15px 0;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+      .sidebar ul li {
+          margin-bottom: 0;
+      }
+      .sidebar ul {
+          padding: 10px; /* Opsional: Tambahkan padding */
+      }
+    }
+
   </style>
 </head>
 <body>
 
   <!-- header -->
-  <header class="p-3 bg-white">
+  <!-- <header class="p-3 bg-white">
     <div class="container d-flex flex-wrap justify-content-center align-items-center">
       <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 me-lg-auto text-dark text-decoration-none">
         <span class="fs-4 fw-bold">Giska Eileen</span>
@@ -202,14 +258,127 @@
         <li class="nav-item"><a href="#kontak" class="nav-link text-dark">Kontak</a></li>
       </ul>
     </div>
-  </header>
+  </header> -->
+
+  <!-- <header class="p-2 bg-white">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <span class="fs-4 fw-bold">Giska Eileen</span>
+      </a>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="modal" data-bs-target="#navModal" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="uil uil-bars"></i></span>
+      </button>
+      <div class="collapse d-lg-flex " id="navbarNav">
+        <ul class="nav ms-auto">
+          <li class="nav-item"><a href="#" class="nav-link text-dark">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link text-dark">Tentang saya</a></li>
+          <li class="nav-item"><a href="#skill" class="nav-link text-dark">Skill</a></li>
+          <li class="nav-item"><a href="#portofolio" class="nav-link text-dark">Projek</a></li>
+          <li class="nav-item"><a href="#kontak" class="nav-link text-dark">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </header> -->
   
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="navModal" tabindex="-1" aria-labelledby="navModalLabel" aria-hidden="true" data-bs-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="navModalLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#" class="nav-link text-dark">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link text-dark">Tentang saya</a></li>
+            <li class="nav-item"><a href="#skill" class="nav-link text-dark">Skill</a></li>
+            <li class="nav-item"><a href="#portofolio" class="nav-link text-dark">Projek</a></li>
+            <li class="nav-item"><a href="#kontak" class="nav-link text-dark">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <header class="p-2 bg-white">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <span class="fs-4 fw-bold">Giska Eileen</span>
+      </a>
+      <button class="navbar-toggler d-lg-none justify-content-end" type="button" id="sidebarToggle" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="uil uil-bars"></i></span>
+      </button>
+      <div class="collapse d-lg-flex" id="navbarNav">
+        <ul class="nav ms-auto">
+          <li class="nav-item"><a href="#" class="nav-link text-dark">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link text-dark">Tentang saya</a></li>
+          <li class="nav-item"><a href="#skill" class="nav-link text-dark">Skill</a></li>
+          <li class="nav-item"><a href="#portofolio" class="nav-link text-dark">Projek</a></li>
+          <li class="nav-item"><a href="#kontak" class="nav-link text-dark">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </header> -->
+
+  <header class="p-2 bg-white">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+            <span class="fs-4 fw-bold">Giska Eileen</span>
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" id="sidebarToggle" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="uil uil-bars"></i></span>
+        </button>
+        <div class="collapse d-lg-flex" id="navbarNav">
+            <ul class="nav ms-auto">
+                <li class="nav-item"><a href="#" class="nav-link text-dark">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link text-dark">Tentang saya</a></li>
+                <li class="nav-item"><a href="#skill" class="nav-link text-dark">Skill</a></li>
+                <li class="nav-item"><a href="#portofolio" class="nav-link text-dark">Projek</a></li>
+                <li class="nav-item"><a href="#kontak" class="nav-link text-dark">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+  </header>
+
+  
+  <!-- Sidebar -->
+  <!-- <div class="sidebar" id="sidebar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a href="#" class="d-flex align-items-center mb-4 mb-lg-0 text-dark text-decoration-none">
+        <span class="fs-4 fw-bold">Giska Eileen</span>
+      </a>
+    </div>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="#" class="nav-link text-dark mb-2"><i class="uil uil-estate"></i> Home</a></li>
+      <li class="nav-item"><a href="#about" class="nav-link text-dark mb-2"><i class="uil uil-user"></i> Tentang saya</a></li>
+      <li class="nav-item"><a href="#skill" class="nav-link text-dark mb-2"><i class="uil uil-briefcase-alt"></i> Skill</a></li>
+      <li class="nav-item"><a href="#portofolio" class="nav-link text-dark mb-2"><i class="uil uil-scenery"></i> Projek</a></li>
+      <li class="nav-item"><a href="#kontak" class="nav-link text-dark mb-2"><i class="uil uil-message"></i> Kontak</a></li>
+    </ul>
+  </div> -->
+  
+  <div class="sidebar" id="sidebar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <a href="#" class="d-flex align-items-center mb-4 mb-lg-0 text-dark text-decoration-none">
+            <span class="fs-4 fw-bold">Giska Eileen</span>
+        </a>
+    </div>
+    <ul class="nav flex-column">
+        <li class="nav-item"><a href="#" class="nav-link fs-5 text-dark mb-4"><i class="uil uil-estate"></i> Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link fs-5 text-dark mb-4"><i class="uil uil-user"></i> Tentang saya</a></li>
+        <li class="nav-item"><a href="#skill" class="nav-link fs-5 text-dark mb-4"><i class="uil uil-briefcase-alt"></i> Skill</a></li>
+        <li class="nav-item"><a href="#portofolio" class="nav-link fs-5 text-dark mb-4"><i class="uil uil-scenery"></i> Projek</a></li>
+        <li class="nav-item"><a href="#kontak" class="nav-link fs-5 text-dark mb-4"><i class="uil uil-message"></i> Kontak</a></li>
+    </ul>
+  </div>
 
   <!-- home -->
   <section class="hero-section">
     <div class="container">
         <div class="hero-content d-flex flex-column-reverse flex-lg-row align-items-center text-center text-lg-start">
             <div class="text-center text-lg-start">
+              <br>
                 <div>
                     <span class="fs-1 fw-bold text-primary">Hai, Saya Giska Eileen</span><br>
                     <span class="fs-5">siswa</span>
@@ -217,15 +386,18 @@
                 </div>
                 <div class="mt-4">
                     <a href="#kontak" class="btn btn-primary me-3">Hubungi Saya</a>
-                    <a href="assets/MODUL 3 Basisdata edit.pdf" class="btn btn-outline-secondary" download>Download CV</a>
+                    <a href="assets/MODUL 3 Basisdata edit.pdf" class="btn btn-outline-secondary" download>Download CV</i></a>
                 </div>
                 <div class="social-icons mt-4">
                     <a href="https://www.youtube.com/@elisiamazamirnathania6893" class="me-3" target="_blank"><i class="uil uil-youtube"></i></a>
                     <a href="https://www.instagram.com/giskaei?igsh=MTBmMmMzeHAwbG43ag==" class="me-3"><i class="uil uil-instagram" target="_blank"></i></a>
                     <a href="https://github.com/giskaeileen/" class="me-3" target="_blank"><i class="uil uil-github-alt"></i></a>
+                    <a href="https://www.linkedin.com/in/giska-eileen-759938318" class="me-3" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
                 </div>
             </div>
             <img src="assets/giska1.png" alt="Foto Giska" class="profile-photo mb-4 mb-lg-0 ms-lg-4" style="width: 500px; height: auto; max-width: 100%; margin-top: -50px;">
+            <!-- style="width: 500px; height: auto; max-width: 100%; margin-top: -50px;" -->
+            <!-- style="width: 370px; height: auto;" -->
         </div>
     </div>
   </section>
@@ -236,8 +408,8 @@
     <div class="text-start mt-4 d-flex align-items-start flex-column flex-md-row">
       <img src="assets/giska2.jpg" alt="Foto Saya" class="me-md-3 mb-3 mb-md-0 order-2 order-md-1" style="width: 300px; height: auto;">
       <div class="order-1 order-md-2">
-        <span class="fs-2 fw-bold text-primary">Tentang Saya</span><br><br>
-        <p>Halo! Nama saya Giska Eileen, seorang siswa SMK jurusan Rekayasa Perangkat Lunak yang saat ini sedang menjalani magang. Saya memiliki minat dalam desain UI/UX. Meskipun masih dalam tahap belajar, saya telah mengerjakan beberapa proyek yang membantu saya memahami dan menguasai teknologi terbaru dalam industri ini.
+        <span class="fs-1 fw-bold text-primary">Tentang Saya</span><br><br>
+        <p style="text-align: justify;">Halo! Nama saya Giska Eileen, seorang siswa SMK jurusan Rekayasa Perangkat Lunak yang saat ini sedang menjalani magang. Saya memiliki minat dalam desain UI/UX. Meskipun masih dalam tahap belajar, saya telah mengerjakan beberapa proyek yang membantu saya memahami dan menguasai teknologi terbaru dalam industri ini.
 
           <br><br>Selama magang, saya berkesempatan untuk mengaplikasikan pengetahuan yang telah saya pelajari di sekolah dalam situasi nyata, yang memberikan saya wawasan berharga tentang dunia kerja profesional. Saya selalu bersemangat untuk belajar hal baru dan terus mengembangkan keterampilan saya.</p>
       </div>
@@ -263,14 +435,14 @@
     <div class="row">
       <div class="col-sm">
         <h1 class="text-center fw-semibold">Apa yang saya bisa lakukan</h1><br>
-        <p class="text-center">Di bawah ini adalah beberapa kemampuan yang saya miliki yang dapat membantu dalam berbagai proyek dan tugas yang saya kerjakan. Saya berharap keterampilan ini dapat menunjukkan dedikasi dan kompetensi saya di bidang yang saya geluti.</p>
+        <p style="text-align: justify;">Di bawah ini adalah beberapa kemampuan yang saya miliki yang dapat membantu dalam berbagai proyek dan tugas yang saya kerjakan. <br>Saya berharap keterampilan ini dapat menunjukkan dedikasi dan kompetensi saya di bidang yang saya geluti.</p>
       </div>
     </div>
     <br>
     <div class="accordion card-custom-width" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button fw-bold text-primary type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <button class="accordion-button fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             Website Design
           </button>
         </h2>
@@ -343,7 +515,7 @@
         <div class="card">
           <img src="assets/sip1.png" class="card-img-top" alt="Project 1">
           <div class="card-body">
-            <h5 class="card-title">SIP SPP</h5>
+            <h5 class="card-title fw-semibold">SIP SPP</h5>
             <p class="card-text">Website rekapitulasi pembayaran SPP.</p>
             <img src="assets/bootstrap.jpg" class="badge-img" alt="Bootstrap">
             <img src="assets/php1.png" class="badge-img" alt="Php">
@@ -356,7 +528,7 @@
         <div class="card">
           <img src="assets/pkm1.png" class="card-img-top" alt="Project 2">
           <div class="card-body">
-            <h5 class="card-title">Pengajuan PKM</h5>
+            <h5 class="card-title fw-semibold">Pengajuan PKM</h5>
             <p class="card-text">Website sistem pengajuan PKM mahasiswa.</p>
             <img src="assets/bootstrap.jpg" class="badge-img" alt="Bootstrap">
             <img src="assets/php1.png" class="badge-img" alt="Php">
@@ -382,7 +554,7 @@
       <div class="card">
         <img src="assets/por.png" class="card-img-top" alt="Project 3">
         <div class="card-body">
-          <h5 class="card-title">Portofolio</h5>
+          <h5 class="card-title fw-semibold">Portofolio</h5>
           <p class="card-text">Website portofolio pribadi.</p>
           <img src="assets/bootstrap.jpg" class="badge-img" alt="Bootstrap">
           <img src="assets/js.jpg" class="badge-img" alt="JavaScript">
@@ -396,9 +568,9 @@
   <!-- kontak -->
   <section class="container" id="kontak" style="padding-top: 100px;">
     <div class="row justify-content-start">
-      <div class="col-lg-10">
-        <h5 class="fw-bold text-primary">Kontak</h5>
-        <h1 class="mb-5">Hubungi Saya</h1>
+      <div class="col-lg-15">
+        <h1 class="fw-bold text-primary">Kontak</h1>
+        <h5 class="mb-5">Hubungi Saya</h5>
         <form name="submit-to-google-sheet">
           <div class="row g-3">
             <div class="col-md-6">
@@ -441,7 +613,7 @@
             <li><a href="#">Beranda</a></li>
             <li><a href="#about">Tentang Saya</a></li>
             <li><a href="#skill">Skill</a></li>
-            <li><a href="#portofolio">Portofolio</a></li>
+            <li><a href="#portofolio">Projek</a></li>
             <li><a href="#kontak">Kontak</a></li>
           </ul>
         </div>
@@ -460,6 +632,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzHuAr8WfsKcBCrBoz1krB8GK0Bv4rFSZjNZ3ntnyqG0KzfZfWFRT7Jck1jtvrnhJhN/exec'
@@ -476,6 +649,56 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //   // Mengambil semua link dalam modal
+    //   var modalLinks = document.querySelectorAll('#navModal .nav-link');
+
+    //   // Menambahkan event listener untuk setiap link
+    //   modalLinks.forEach(function(link) {
+    //     link.addEventListener('click', function() {
+    //       var navModal = document.getElementById('navModal');
+    //       var bootstrapModal = bootstrap.Modal.getInstance(navModal); // Memperoleh instance modal Bootstrap
+
+    //       if (bootstrapModal) {
+    //         bootstrapModal.hide(); // Menyembunyikan modal
+    //       }
+    //     });
+    //   });
+    // });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const sidebarToggle = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+
+      // Function to close sidebar
+      function closeSidebar() {
+        sidebar.classList.remove('active');
+      }
+
+      // Toggle sidebar on sidebarToggle click
+      sidebarToggle.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+      });
+
+      // Close sidebar when clicking outside sidebar
+      document.addEventListener('click', function(event) {
+        const isClickInsideSidebar = sidebar.contains(event.target);
+        const isClickOnSidebarToggle = sidebarToggle.contains(event.target);
+        
+        if (!isClickInsideSidebar && !isClickOnSidebarToggle) {
+          closeSidebar();
+        }
+     });
+
+      // Close sidebar when clicking on a nav-item
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(function(navLink) {
+        navLink.addEventListener('click', function() {
+          closeSidebar();
+        });
+      });
+    });
   </script>
 </body>
 </html>
