@@ -13,8 +13,9 @@
     body {
         font-family: 'Montserrat', sans-serif;
     }
+
     header {
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 1000; /* Pastikan header berada di atas elemen lain */
         width: 100%;
@@ -185,7 +186,7 @@
       margin-right: 5px; /* Adjust as needed */
     }
 
-    .navbar-toggler-icon i {
+    .navbar-toggler i {
       font-size: 2em; /* Sesuaikan ukuran ikon sesuai kebutuhan Anda */
     }
 
@@ -327,7 +328,7 @@
             <span class="fs-4 fw-bold">Giska Eileen</span>
         </a>
         <button class="navbar-toggler d-lg-none" type="button" id="sidebarToggle" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"><i class="uil uil-bars"></i></span>
+          <span><i class="uil uil-bars"></i></span>
         </button>
         <div class="collapse d-lg-flex" id="navbarNav">
             <ul class="nav ms-auto">
@@ -360,16 +361,16 @@
   
   <div class="sidebar" id="sidebar">
     <div class="container d-flex flex-wrap justify-content-between align-items-center">
-        <a href="#" class="d-flex align-items-center mb-4 mb-lg-0 text-dark text-decoration-none">
+        <a href="#" class="d-flex align-items-center mb-5 mb-lg-0 text-dark text-decoration-none">
             <span class="fs-4 fw-bold">Giska Eileen</span>
         </a>
     </div>
     <ul class="nav flex-column">
-        <li class="nav-item"><a href="#" class="nav-link fs-5 text-dark mb-4"><i class="uil uil-estate"></i> Home</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link fs-5 text-dark mb-4"><i class="uil uil-user"></i> Tentang saya</a></li>
-        <li class="nav-item"><a href="#skill" class="nav-link fs-5 text-dark mb-4"><i class="uil uil-briefcase-alt"></i> Skill</a></li>
-        <li class="nav-item"><a href="#portofolio" class="nav-link fs-5 text-dark mb-4"><i class="uil uil-scenery"></i> Projek</a></li>
-        <li class="nav-item"><a href="#kontak" class="nav-link fs-5 text-dark mb-4"><i class="uil uil-message"></i> Kontak</a></li>
+        <li class="nav-item"><a href="#" class="nav-link fs-6 text-dark mb-4"><i class="uil uil-estate"></i> Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link fs-6 text-dark mb-4"><i class="uil uil-user"></i> Tentang saya</a></li>
+        <li class="nav-item"><a href="#skill" class="nav-link fs-6 text-dark mb-4"><i class="uil uil-briefcase-alt"></i> Skill</a></li>
+        <li class="nav-item"><a href="#portofolio" class="nav-link fs-6 text-dark mb-4"><i class="uil uil-scenery"></i> Projek</a></li>
+        <li class="nav-item"><a href="#kontak" class="nav-link fs-6 text-dark mb-4"><i class="uil uil-message"></i> Kontak</a></li>
     </ul>
   </div>
 
@@ -570,7 +571,7 @@
     <div class="row justify-content-start">
       <div class="col-lg-15">
         <h1 class="fw-bold text-primary">Kontak</h1>
-        <h5 class="mb-5">Hubungi Saya</h5>
+        <h6 class="mb-5">Hubungi Saya</h6>
         <form name="submit-to-google-sheet">
           <div class="row g-3">
             <div class="col-md-6">
